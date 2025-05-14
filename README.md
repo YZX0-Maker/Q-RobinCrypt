@@ -2,6 +2,9 @@
 
 RobinCrypt es un cofre cifrado portátil que te permite guardar archivos sensibles dentro de una memoria USB. Los datos solo pueden visualizarse tras introducir una contraseña o clave válida.
 
+### 📦 Descarga
+👉 [Descargar última versión (.exe)](https://github.com/YZX0-Maker/Q-RobinCrypt/releases/latest)
+
 ## Características
 - Cifrado con Fernet (AES + HMAC)
 - Nombres de archivos ocultos (hash)
