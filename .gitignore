@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+.idea/
+*.swp
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de log
+*.log
+
+# Reportes generados
+*.json
+*.html
+*.pdf
+
+# Archivos de configuración sensibles (si se usan)
+*.pyc
+clave.key
+VaultEncrypted/
+VaultDecrypted/
+index.json
+index.enc
+dist/
+build/
+*.spec
+
