@@ -43,19 +43,17 @@ def load_key_or_ask_password():
 
         key = derive_key_from_password(pwd)
 
-        # ✅ Validar clave intentando descifrar index.enc (si existe)
         if os.path.exists("index.enc"):
             try:
                 with open("index.enc", "rb") as fidx:
                     encrypted_index = fidx.read()
                 f = Fernet(key)
-                f.decrypt(encrypted_index)  # prueba de clave
+                f.decrypt(encrypted_index)
             except InvalidToken:
                 raise Exception("❌ Contraseña incorrecta.")
             except Exception as e:
                 raise Exception(f"Error al validar clave: {e}")
 
-        # ✅ Si todo va bien, ahora sí guardamos la clave
         with open(KEY_FILE, "wb") as f:
             f.write(key)
         return key
@@ -65,7 +63,6 @@ def decrypt_all(key: bytes):
     from cryptography.fernet import InvalidToken
 
     if not os.path.exists("index.enc"):
-        # Primer uso: no hay archivos que descifrar
         print("[INFO] Primer uso: no se encontró index.json, nada que descifrar.")
         return
 
@@ -122,7 +119,6 @@ def encrypt_all(key: bytes):
     with open(INDEX_FILE, "w") as fidx:
         json.dump(index, fidx)
 
-    # Cifrar el index.json
     with open(INDEX_FILE, "rb") as raw_index:
         encrypted_index = f.encrypt(raw_index.read())
     with open("index.enc", "wb") as enc_index:

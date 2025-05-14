@@ -20,14 +20,12 @@ def open_vault_window(on_close):
             with open(filepath, "rb") as src, open(dest, "wb") as dst:
                 dst.write(src.read())
 
-    # Crear botones con ancho completo
     btn_open = tk.Button(root, text="📂 Abrir carpeta", command=open_folder)
     btn_add = tk.Button(root, text="➕ Añadir archivo", command=add_file)
     btn_exit = tk.Button(
         root, text="🔐 Cerrar cofre", command=lambda: (on_close(), root.destroy())
     )
 
-    # Organizar botones con relleno horizontal completo
     btn_open.pack(fill="x", padx=20, pady=10)
     btn_add.pack(fill="x", padx=20, pady=10)
     btn_exit.pack(fill="x", padx=20, pady=10)
