@@ -11,7 +11,7 @@ RobinCrypt es un cofre cifrado portátil que te permite guardar archivos sensibl
 
 ## Uso
 
-1. Ejecuta `vault_launcher.py` o `cofre.exe` desde la raíz del USB.
+1. Ejecuta `Robincrypt.py` o `Robincrypt.exe` desde la raíz del USB.
 2. Introduce la contraseña o carga la clave.
 3. Accede, añade o extrae archivos desde la interfaz.
 4. Al cerrar el cofre, todo se recifra automáticamente.
